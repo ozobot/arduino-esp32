@@ -48,6 +48,9 @@
             },
             {
               "name": "Arduino Nano ESP32"
+            },
+            {
+              "name": "Ozobot circuit kit"
             }
           ],
           "toolsDependencies": [
