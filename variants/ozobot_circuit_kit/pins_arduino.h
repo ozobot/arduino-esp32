@@ -92,14 +92,8 @@ static constexpr uint8_t A9         = 10;
 
 // alternate pin functions
 
-// static constexpr uint8_t LED_BUILTIN = D13;
-
 static constexpr uint8_t TX   = D21;
 static constexpr uint8_t RX   = D22;
-// static constexpr uint8_t RTS  = LED_BLUE;
-// static constexpr uint8_t CTS  = D3;
-// static constexpr uint8_t DTR  = A0;
-// static constexpr uint8_t DSR  = D4;
 
 static constexpr uint8_t SS   = D14;
 static constexpr uint8_t MOSI = D16;
@@ -114,12 +108,6 @@ static constexpr uint8_t MOTOR_L_IN2 = D11;
 
 static constexpr uint8_t MOTOR_R_IN1 = D12;
 static constexpr uint8_t MOTOR_R_IN2 = D13;
-
-// #define PIN_I2S_SCK     D7
-// #define PIN_I2S_FS      D8
-// #define PIN_I2S_SD      D9
-// #define PIN_I2S_SD_OUT  D9 // same as bidir
-// #define PIN_I2S_SD_IN   D10
 
 #ifndef __cplusplus
 #undef constexpr

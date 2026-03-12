@@ -56159,6 +56159,10 @@ pandabyte_xs3.menu.ZigbeeMode.zczr.build.zigbee_libs=-lesp_zb_api.zczr -lzboss_s
 # Ozobot Circuit kit
 
 ozobot_circuit_kit.name=Ozobot circuit kit
+ozobot_circuit_kit.vid.0=0x2D81
+ozobot_circuit_kit.pid.0=0x1901
+ozobot_circuit_kit.upload_port.0.vid=0x303A
+ozobot_circuit_kit.upload_port.0.pid=0x1001
 
 ozobot_circuit_kit.bootloader.tool=esptool_py
 ozobot_circuit_kit.bootloader.tool.default=esptool_py
@@ -56205,17 +56209,12 @@ ozobot_circuit_kit.build.memory_type={build.boot}_{build.psram_type}
 ozobot_circuit_kit.build.disable_pin_remap=
 
 ## IDE 2.0 Seems to not update the value
-ozobot_circuit_kit.menu.JTAGAdapter.default=Disabled
-ozobot_circuit_kit.menu.JTAGAdapter.default.build.copy_jtag_files=0
-ozobot_circuit_kit.menu.JTAGAdapter.builtin=Integrated USB JTAG
-ozobot_circuit_kit.menu.JTAGAdapter.builtin.build.openocdscript=esp32s3-builtin.cfg
-ozobot_circuit_kit.menu.JTAGAdapter.builtin.build.copy_jtag_files=1
-ozobot_circuit_kit.menu.JTAGAdapter.external=FTDI Adapter
-ozobot_circuit_kit.menu.JTAGAdapter.external.build.openocdscript=esp32s3-ftdi.cfg
-ozobot_circuit_kit.menu.JTAGAdapter.external.build.copy_jtag_files=1
 ozobot_circuit_kit.menu.JTAGAdapter.bridge=ESP USB Bridge
 ozobot_circuit_kit.menu.JTAGAdapter.bridge.build.openocdscript=esp32s3-bridge.cfg
 ozobot_circuit_kit.menu.JTAGAdapter.bridge.build.copy_jtag_files=1
+ozobot_circuit_kit.menu.JTAGAdapter.external=FTDI Adapter
+ozobot_circuit_kit.menu.JTAGAdapter.external.build.openocdscript=esp32s3-ftdi.cfg
+ozobot_circuit_kit.menu.JTAGAdapter.external.build.copy_jtag_files=1
 
 ozobot_circuit_kit.menu.LoopCore.1=Core 1
 ozobot_circuit_kit.menu.LoopCore.1.build.loop_core=-DARDUINO_RUNNING_CORE=1
@@ -56227,6 +56226,9 @@ ozobot_circuit_kit.menu.EventsCore.1.build.event_core=-DARDUINO_EVENT_RUNNING_CO
 ozobot_circuit_kit.menu.EventsCore.0=Core 0
 ozobot_circuit_kit.menu.EventsCore.0.build.event_core=-DARDUINO_EVENT_RUNNING_CORE=0
 
+ozobot_circuit_kit.menu.PartitionScheme.huge_app=Huge APP (3MB No OTA/1MB SPIFFS)
+ozobot_circuit_kit.menu.PartitionScheme.huge_app.build.partitions=huge_app
+ozobot_circuit_kit.menu.PartitionScheme.huge_app.upload.maximum_size=3145728
 ozobot_circuit_kit.menu.PartitionScheme.default=Default 4MB with spiffs (1.2MB APP/1.5MB SPIFFS)
 ozobot_circuit_kit.menu.PartitionScheme.default.build.partitions=default
 ozobot_circuit_kit.menu.PartitionScheme.defaultffat=Default 4MB with ffat (1.2MB APP/1.5MB FATFS)
@@ -56248,9 +56250,6 @@ ozobot_circuit_kit.menu.PartitionScheme.noota_ffat.upload.maximum_size=2097152
 ozobot_circuit_kit.menu.PartitionScheme.noota_3gffat=No OTA (1MB APP/3MB FATFS)
 ozobot_circuit_kit.menu.PartitionScheme.noota_3gffat.build.partitions=noota_3gffat
 ozobot_circuit_kit.menu.PartitionScheme.noota_3gffat.upload.maximum_size=1048576
-ozobot_circuit_kit.menu.PartitionScheme.huge_app=Huge APP (3MB No OTA/1MB SPIFFS)
-ozobot_circuit_kit.menu.PartitionScheme.huge_app.build.partitions=huge_app
-ozobot_circuit_kit.menu.PartitionScheme.huge_app.upload.maximum_size=3145728
 ozobot_circuit_kit.menu.PartitionScheme.min_spiffs=Minimal SPIFFS (1.9MB APP with OTA/128KB SPIFFS)
 ozobot_circuit_kit.menu.PartitionScheme.min_spiffs.build.partitions=min_spiffs
 ozobot_circuit_kit.menu.PartitionScheme.min_spiffs.upload.maximum_size=1966080
@@ -56271,9 +56270,10 @@ ozobot_circuit_kit.menu.PinNumbers.default=By Arduino pin (default)
 ozobot_circuit_kit.menu.PinNumbers.byGPIONumber=By GPIO number (legacy)
 ozobot_circuit_kit.menu.PinNumbers.byGPIONumber.build.disable_pin_remap=-DBOARD_USES_HW_GPIO_NUMBERS
 
-ozobot_circuit_kit.menu.USBMode.default=Normal mode (TinyUSB)
-ozobot_circuit_kit.menu.USBMode.hwcdc=Debug mode (Hardware CDC)
+ozobot_circuit_kit.menu.USBMode.hwcdc=Hardware CDC and JTAG
 ozobot_circuit_kit.menu.USBMode.hwcdc.build.usb_mode=1
+ozobot_circuit_kit.menu.USBMode.default=USB-OTG (TinyUSB)
+ozobot_circuit_kit.menu.USBMode.default.build.usb_mode=0
 ozobot_circuit_kit.menu.USBMode.hwcdc.debug.executable={build.path}/{build.project_name}.elf
 
 ozobot_circuit_kit.menu.DebugLevel.none=None
