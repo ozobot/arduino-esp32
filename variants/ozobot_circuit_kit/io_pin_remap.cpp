@@ -41,16 +41,17 @@ static const int8_t TO_GPIO_NUMBER[] = {
     14 ,  // [20] I2C Interrupt
     43 , // [21] UART TX
     44 , // [22] UART RX
-    1, // [23] ADC Channel 0
-    2, // [24] ADC Channel 1
-    3, // [25] ADC Channel 2
-    4, // [26] ADC Channel 3
-    5, // [27] ADC Channel 4
-    6, // [28] ADC Channel 5
-    7, // [29] ADC Channel 6
-    8, // [30] ADC Channel 7
-    9, // [31] ADC Channel 8
-    10, // [32] ADC Channel 9
+    0, // [23] Boot pin
+    1, // [24] ADC Channel 0
+    2, // [25] ADC Channel 1
+    3, // [26] ADC Channel 2
+    4, // [27] ADC Channel 3
+    5, // [28] ADC Channel 4
+    6, // [29] ADC Channel 5
+    7, // [30] ADC Channel 6
+    8, // [31] ADC Channel 7
+    9, // [32] ADC Channel 8
+    10, // [33] ADC Channel 9
 };
 
 static const unsigned DIGITAL_PINS_COUNT = sizeof(TO_GPIO_NUMBER) / sizeof(TO_GPIO_NUMBER[0]);

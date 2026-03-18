@@ -37,17 +37,18 @@ static constexpr uint8_t D19        = 19; // I2C SCK
 static constexpr uint8_t D20        = 20; // I2C Interrupt
 static constexpr uint8_t D21        = 21; // UART TX
 static constexpr uint8_t D22        = 22; // UART RX
+static constexpr uint8_t D23        = 23; // Boot pin
 
-static constexpr uint8_t A0         = 23; // also DTR
-static constexpr uint8_t A1         = 24;
-static constexpr uint8_t A2         = 25;
-static constexpr uint8_t A3         = 26;
-static constexpr uint8_t A4         = 27; // also SDA
-static constexpr uint8_t A5         = 28; // also SCL
-static constexpr uint8_t A6         = 29;
-static constexpr uint8_t A7         = 30;
-static constexpr uint8_t A8         = 31;
-static constexpr uint8_t A9         = 32;
+static constexpr uint8_t A0         = 24; // also DTR
+static constexpr uint8_t A1         = 25;
+static constexpr uint8_t A2         = 26;
+static constexpr uint8_t A3         = 27;
+static constexpr uint8_t A4         = 28; // also SDA
+static constexpr uint8_t A5         = 29; // also SCL
+static constexpr uint8_t A6         = 30;
+static constexpr uint8_t A7         = 31;
+static constexpr uint8_t A8         = 32;
+static constexpr uint8_t A9         = 33;
 
 #else
 
@@ -76,6 +77,7 @@ static constexpr uint8_t D19        = 48; // I2C SCK
 static constexpr uint8_t D20        = 14; // I2C Interrupt
 static constexpr uint8_t D21        = 43; // UART TX
 static constexpr uint8_t D22        = 44; // UART RX
+static constexpr uint8_t D23        = 0;  // Boot pin
 
 static constexpr uint8_t A0         = 1;
 static constexpr uint8_t A1         = 2;
@@ -108,6 +110,10 @@ static constexpr uint8_t MOTOR_L_IN2 = D11;
 
 static constexpr uint8_t MOTOR_R_IN1 = D12;
 static constexpr uint8_t MOTOR_R_IN2 = D13;
+
+static constexpr uint8_t BUTTON = D23;
+
+static constexpr uint8_t RGB_LED = D9;
 
 #ifndef __cplusplus
 #undef constexpr
